@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with JohnDoe landing page.">
     <meta name="author" content="Devcrud">
-    <title>Show page</title>
+    <title>Riahi Rami</title>
     <!-- font icons -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'assets/vendors/themify-icons/css/themify-icons.css' %}">
@@ -316,7 +316,7 @@
                
                  <div class="card-body">
                    <p class="card-text">
-                   <p class="subtitle">Link : {{p.url}}</p>
+                   <p class="subtitle">Link : <a href={{p.url}} target="_blank">{{p.url}}</a> </p>
                    <p class="subtitle">Technologies : {{p.techno}}</p>
                    </p>
                    {% comment %} <p>
