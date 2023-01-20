@@ -301,7 +301,7 @@
     <!-- Portfolio Section -->
     <section class="section bg-custom-gray" id="portfolio">
         <div class="container">
-            <button class="btn btn-primary btn-rounded float-right"><a style="color:white;" href="/index">Add New Project</a></button>
+            {% comment %} <button class="btn btn-primary btn-rounded float-right"><a style="color:white;" href="/index">Add New Project</a></button> {% endcomment %}
             <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
 
             <div class="portfolio ">
@@ -319,10 +319,10 @@
                    <p class="subtitle">Link : {{p.url}}</p>
                    <p class="subtitle">Technologies : {{p.techno}}</p>
                    </p>
-                   <p>
+                   {% comment %} <p>
                         <a class="btn btn-info" href="/edit/{{ p.id }}">Edit</a>
                         <a class="btn btn-primary" href="/delete/{{p.id}}">Delete</a>
-                   </p>    
+                   </p>     {% endcomment %}
                  </div>
                </div>
             </div>
