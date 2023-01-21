@@ -2,7 +2,7 @@ from django.db import models
 class Projects(models.Model):  
     id = models.AutoField(primary_key=True,auto_created = True) 
     name = models.CharField(max_length=100)  
-    image = models.CharField(max_length=100)   
+    image = models.FileField(null="True",blank="True",upload_to="images/")   
     url = models.CharField(max_length=100) 
     techno = models.CharField(max_length=100) 
     status = models.CharField(max_length=20) 

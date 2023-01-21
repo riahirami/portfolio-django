@@ -11,6 +11,6 @@ class ProjectInline(admin.TabularInline):
 
 @admin.register(Projects)
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'url', 'techno')
+    list_display = ('name', 'url', 'techno','image')
     list_filter = ('techno','name')
     search_fields = ('name', 'techno')

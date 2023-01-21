@@ -311,13 +311,18 @@
                 <div class="card" style="width: 18rem;">
                     <h6 class="title">{{p.name}}</h6>
                     {% load static %}
-                    <img  class="card-img-top img-fluid" src="{% static 'assets/imgs/blog1.jpg' %}" />
+                    <img  class="card-img-top img-fluid grow" style="
+                    width: 286px;
+                    height: 230px;
+                " src="{{p.image.url}}" />
+                    {% comment %} <img  class="card-img-top img-fluid" src="{% static 'assets/imgs/blog1.jpg' %}" /> {% endcomment %}
                
                
                  <div class="card-body">
                    <p class="card-text">
-                   <p class="subtitle">Link : <a href={{p.url}} target="_blank">{{p.url}}</a> </p>
-                   <p class="subtitle">Technologies : {{p.techno}}</p>
+                   <p class="subtitle"><b>Github Link : </b><a href={{p.url}} target="_blank">{{p.url}}</a> </p>
+                   <p class="subtitle"><b>Technologies used:</b> {{p.techno}}</p>
+                   <p class="subtitle"><b>Status:</b> {{p.status}}</p>
                    </p>
                    {% comment %} <p>
                         <a class="btn btn-info" href="/edit/{{ p.id }}">Edit</a>

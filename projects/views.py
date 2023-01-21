@@ -6,7 +6,7 @@ from projects.models import Projects
  
 def project(request):  
     if request.method == "POST":  
-        form = ProjectsForm(request.POST)  
+        form = ProjectsForm(request.POST, request.FILES)  
         if form.is_valid():  
             try:  
                 form.save()  
