@@ -70,6 +70,42 @@
             </div>
         </div>
     </nav>
+
+     <!-- Portfolio Section -->
+     <section class="section bg-custom-gray" id="portfolio">
+        <div class="container">
+            {% comment %} <button class="btn btn-primary btn-rounded float-right"><a style="color:white;" href="/index">Add New Project</a></button> {% endcomment %}
+            <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
+
+            <div class="portfolio ">
+                <div class="row">
+                    <div class="col-md-12">
+                <div class="" >
+                    <h6 class="title">{{project.name}}</h6>
+                    {% load static %}
+                    <img  class="card-img-top img-fluid grow" src="{{project.image.url}}" />
+                    {% comment %} <img  class="card-img-top img-fluid" src="{% static 'assets/imgs/blog1.jpg' %}" /> {% endcomment %}
+               
+               
+                 <div class="">
+                   <p class="">
+                   <p class="subtitle"><b>Github Link : </b><a href={{project.url}} target="_blank">{{project.url}}</a> </p>
+                   <p class="subtitle"><b>Technologies used:</b> {{project.techno}}</p>
+                   <p class="subtitle"><b>Status:</b> {{project.status}}</p>
+                   </p>
+                   {% comment %} <p>
+                        <a class="btn btn-info" href="/edit/{{ p.id }}">Edit</a>
+                        <a class="btn btn-primary" href="/delete/{{p.id}}">Delete</a>
+                   </p>     {% endcomment %}
+                 </div>
+               </div>
+            </div>
+            </div>
+            </div>  
+        </div>            
+    </section>
+    <!-- End of portfolio section -->
+
     <div class="container-fluid">
         <div id="about" class="row about-section">
             <div class="col-lg-4 about-card">
@@ -180,165 +216,12 @@
         </div>
     </section>
 
-    <!--Resume Section-->
-    <section class="section" id="resume">
-        <div class="container">
-            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Expertise</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2016 - Present</h6>
-                            <P>Sales manager Orange Tunisia.</P>
-                            <P class="subtitle"></P>
-                        </div>
-                        <hr>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2015 : March - June</h6>
-                            <P>Stage PFE: Smart-Thinking</P>
-                            <P class="subtitle">Conception et developpement d'une application web responsive de paris et pronostic sportif (Symfony).</p>
-                                <p>Créaction des api de parsing des données (Api rest).</P>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="mt-2">
-                                <h4>Education</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="title text-danger">2012 - 2015</h6>
-                            <P>fundamental licence on computer science</P>
-                            <P class="subtitle">bac + 3</P>
-                            <hr>
-                            <h6 class="title text-danger">2020 - Present</h6>
-                            <P>Engineering student</P>
-                            <P class="subtitle">Speciality : Software engineering</P>
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Skills</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>HTML5 | CSS3</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>JavaScript</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>PHP</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>SQL | NoSQL</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Python</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>Java</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                       <div class="card-header">
-                            <div class="pull-left">
-                                <h4 class="mt-2">Languages</h4>
-                                <span class="line"></span>  
-                            </div>
-                        </div>
-                        <div class="card-body pb-2">
-                           <h6>Arabe</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>French</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <h6>English</h6>
-                            <div class="progress mb-3">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+
 
 
    
-    <section class="section bg-dark py-5" id="hireme">
-        <div class="container text-center">
-            <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-            <button class="btn bg-info w-lg" ><a href="https://www.linkedin.com/in/rami-riahi/" target="_blank">Hire me</button>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="section bg-custom-gray" id="portfolio">
-        <div class="container">
-            {% comment %} <button class="btn btn-primary btn-rounded float-right"><a style="color:white;" href="/index">Add New Project</a></button> {% endcomment %}
-            <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
-
-            <div class="portfolio ">
-                <div class="row">
-                {% for p in projects %}
-                    <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <h6 class="title">{{p.name}}</h6>
-                    {% load static %}
-                    <img  class="card-img-top img-fluid grow" style="
-                    width: 286px;
-                    height: 230px;
-                " src="{{p.image.url}}" />
-                    {% comment %} <img  class="card-img-top img-fluid" src="{% static 'assets/imgs/blog1.jpg' %}" /> {% endcomment %}
-               
-               
-                 <div class="card-body">
-                   <p class="card-text">
-                   <p class="subtitle"><b>Github Link : </b><a href={{p.url}} target="_blank">{{p.url}}</a> </p>
-                   <p class="subtitle"><b>Technologies used:</b> {{p.techno}}</p>
-                   <p class="subtitle"><b>Status:</b> {{p.status}}</p>
-                   <button class="form-control btn btn-info"><a href="/details/{{p.id }}">show</a></button>
-                   </p>
-                   {% comment %} <p>
-                        <a class="btn btn-info" href="/edit/{{ p.id }}">Edit</a>
-                        <a class="btn btn-primary" href="/delete/{{p.id}}">Delete</a>
-                   </p>     {% endcomment %}
-                 </div>
-               </div>
-            </div>
-               {% endfor %}
-            </div>
-            </div>  
-        </div>            
-    </section>
-    <!-- End of portfolio section -->
-
     <div class="section contact" id="contact">
         <div id="map" class="map"></div>
         <div class="container">

@@ -22,6 +22,9 @@ def show(request):
 def edit(request, id):  
     project = Projects.objects.get(id=id)  
     return render(request,'edit.html', {'project':project})  
+def details(request, id):  
+    project = Projects.objects.get(id=id)  
+    return render(request,'details.html', {'project':project})      
 def update(request, id):  
     project = Projects.objects.get(id=id)  
     form = ProjectsForm(request.POST, instance = project)  
